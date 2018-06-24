@@ -1,6 +1,6 @@
 import express from 'express';
 import fs from 'fs';
-import renderViewMiddleware from './middleware/renderView'
+import renderViewMiddleware from './middleware/renderView';
 
 // init the app
 const app = express();
@@ -43,5 +43,5 @@ app.use(express.static(__dirname));
 
 // start the app
 app.listen(3000, () => {
-  console.log('App listening on port: 3000');
+  console.log('💯 App listening on port: 3000');
 });

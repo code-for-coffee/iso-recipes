@@ -7,7 +7,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(jsx|es6)$/,
+        test: /\.(jsx|js)$/,
         exclude: /node_modules/,
         loader: "babel-loader"
       },
@@ -18,6 +18,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.css', '.es6']
+    extensions: ['.js', '.jsx', '.css']
   }
 };

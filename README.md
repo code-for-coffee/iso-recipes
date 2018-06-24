@@ -1,6 +1,6 @@
-# Chapter 2 Example Code
+# ISO (In Search of) Recipes
 
-## A simple recipes app home page
+## A simple, isomorphic recipes app home page
 
 ## Getting started
 

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app.jsx';
 import { Provider } from 'react-redux';
-import initRedux from './init-redux.es6';
+import initRedux from './init-redux.js';
 require('./style.css');
 
 console.log("Browser packed file loaded");
