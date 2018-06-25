@@ -3,13 +3,12 @@ import React from 'react';
 const Recipes = (props) => {
 
   const renderRecipeItems = () => {
-    let items = [];
     if (!props.recipes) {
       return items;
     }
-    props.recipes.forEach((item, index) => {
+    const items = props.recipes.map((item, index) => {
       if (!item.featured) {
-        items.push(<div key={item.title+index} className="item">
+        return(<div key={item.title+index} className="item">
           <div className="ui small image"><img src={`http://localhost:3000/assets/${item.thumbnail}`} /></div>
           <div className="content">
             <div className="header">{item.title}</div>
