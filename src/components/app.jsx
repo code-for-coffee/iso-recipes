@@ -9,29 +9,29 @@ class App extends React.Component {
 
   componentDidMount() {
     this.props.actions.getHomePageData();
-  }
+  };
 
   render() {
-      return (
-          <div>
-            <div className="ui fixed inverted menu">
-              <div className="ui contianer">
-                <a href="/" className="header item">Recipes Example App</a>
-              </div>
-            </div>
-            <div className="ui padded grid">
-              <Recipes {...this.props}/>
-              <Featured {...this.props.featuredRecipe}/>
-            </div>
-            <div className="ui inverted vertical footer segment">
-            Footer
+    return (
+        <div>
+          <div className="ui fixed inverted menu">
+            <div className="ui contianer">
+              <a href="/" className="header item">Recipes Example App</a>
             </div>
           </div>
-      );
+          <div className="ui padded grid">
+            <Recipes {...this.props}/>
+            <Featured {...this.props.featuredRecipe}/>
+          </div>
+          <div className="ui inverted vertical footer segment">
+          Footer
+          </div>
+        </div>
+    );
   }
-}
+};
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   let { recipes, featuredRecipe } = state.recipes;
   return {
     recipes,
@@ -39,8 +39,8 @@ function mapStateToProps(state) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return { actions: bindActionCreators(actionCreators, dispatch) }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App);
